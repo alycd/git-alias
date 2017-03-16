@@ -4,7 +4,7 @@ Useful Git Aliases
 ### When Using Forks and Upstreams
 
     # Simple wrapper for fetching all upstream, then rebasing the given branch. Use before you push as well
-    up = pull upstream master
+    up = pull --rebase upstream master
 
     # Rebases on the given fork & branch; for preparing a PR
     ready = rebase -i @{u}
