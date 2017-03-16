@@ -31,3 +31,13 @@ Useful Git Aliases
     # pull --rebase and push - a nice shortcut to use instead of git push that can fail
     pp = "!git pull --rebase && git push"
 
+
+### Sample Flow
+```
+git checkout -b feature --> create new feature branch
+git up --> get latest from upstream
+git publish --> set your origin to newly created branch
+... do work and commits ...
+git ready --> squash commits
+git done --> force pushes to your origin
+```
