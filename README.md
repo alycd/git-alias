@@ -6,8 +6,8 @@ Useful Git Aliases
     # Simple wrapper for fetching all upstream, then rebasing the given branch. Use before you push as well
     up = pull --rebase upstream master
 
-    # Rebases on the given fork & branch; for preparing a PR
-    ready = rebase -i @{u}
+    # Rebases on the given fork & branch from last commit on upstream/master; for preparing a PR
+    ready = "!git rebase -i \"$(git rev-parse upstream/master)\""
 
     # Forces Pushes branch to Origin
     done = "!f() { git push --force-with-lease origin $@; }; f"
